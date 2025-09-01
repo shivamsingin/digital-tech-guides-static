@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local SEO Services - Digital Tech Guides</title>
+    <meta name="description" content="Dominate local search results with our expert Local SEO services. Get found by customers in your area with proven local SEO strategies." />
+    <meta name="keywords" content="local SEO, local search optimization, Google My Business, local marketing, local SEO services" />
+    <meta name="author" content="Digital Tech Guides" />
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/index-CFRe_ZTG.css">
+
+    <style>
+      .mobile-menu { display: none; }
+      .mobile-menu.active { display: block; }
+      .dropdown-menu { display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); min-width: 200px; z-index: 50; }
+      .dropdown-menu.active { display: block; }
+      .dropdown-item { display: block; padding: 12px 16px; color: #374151; text-decoration: none; transition: background-color 0.2s; }
+      .dropdown-item:hover { background-color: #f9fafb; }
+      .hero-image { position: absolute; right: 0; top: 0; height: 100%; width: 50%; opacity: 0.1; }
+      .hero-image img { height: 100%; width: 100%; object-fit: cover; }
+      .feature-card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+      .feature-card:hover { transform: translateY(-5px); }
+      .feature-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: white; font-size: 1.5rem; }
+      .process-step { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); text-align: center; position: relative; }
+      .process-step::before { content: counter(step-counter); counter-increment: step-counter; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; }
+      .process-container { counter-reset: step-counter; }
+      .cta-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 0; text-align: center; }
+      .stats-section { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 80px 0; }
+      .stat-card { text-align: center; padding: 20px; }
+      .stat-number { font-size: 3rem; font-weight: bold; color: #fbbf24; margin-bottom: 10px; }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-card shadow-sm border-b border-border sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold text-foreground">Digital Tech Guides</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Home</a>
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Case Studies</a>
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/about.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
+
+              <!-- Services Dropdown -->
+              <div class="relative">
+                <button id="services-dropdown" class="px-3 py-2 text-sm font-medium text-foreground transition-colors flex items-center">
+                  Services
+                  <i class="fas fa-chevron-down ml-1 h-4 w-4"></i>
+                </button>
+                <div id="dropdown-menu" class="dropdown-menu">
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/services.html" class="dropdown-item">All Services</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/local-seo.html" class="dropdown-item">Local SEO</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/ecommerce-seo.html" class="dropdown-item">E-commerce SEO</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/enterprise-seo.html" class="dropdown-item">Enterprise SEO</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/youtube-seo.html" class="dropdown-item">YouTube SEO</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/ppc-advertising.html" class="dropdown-item">PPC Advertising</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/social-media-marketing.html" class="dropdown-item">Social Media Marketing</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/web-development.html" class="dropdown-item">Web Development</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/email-marketing.html" class="dropdown-item">Email Marketing</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/content-marketing.html" class="dropdown-item">Content Marketing</a>
+                  <a href="https://shivamsingin.github.io/digital-tech-guides-static/mobile-marketing.html" class="dropdown-item">Mobile Marketing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-400 hover:text-white">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="https://shivamsingin.github.io/digital-tech-guides-static/" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Home</a>
+            <a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Case Studies</a>
+            <a href="https://shivamsingin.github.io/digital-tech-guides-static/about.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">About</a>
+            <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            <a href="https://shivamsingin.github.io/digital-tech-guides-static/services.html" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Services</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 overflow-hidden">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Local SEO services" />
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          Dominate
+          <span class="text-yellow-300">Local Search</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          Get found by customers in your area with our proven Local SEO strategies. Dominate Google Maps, local search results, and drive foot traffic to your business.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+            Get Free Local SEO Audit
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+            View Local SEO Results
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="stat-card">
+            <div class="stat-number">93%</div>
+            <div class="text-lg">of local searches lead to a visit</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">76%</div>
+            <div class="text-lg">of mobile searches are local</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">28%</div>
+            <div class="text-lg">of local searches result in a purchase</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Local SEO -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What is Local SEO?</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Local SEO is the practice of optimizing your online presence to attract more business from relevant local searches. It's about making your business visible when people search for products or services in your area.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              When someone searches for "restaurants near me" or "plumber in [city]", Local SEO ensures your business appears in the local search results, Google Maps, and other local directories.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                <span class="text-gray-700">Appear in Google Maps results</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                <span class="text-gray-700">Rank higher in local search</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                <span class="text-gray-700">Get more local customers</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Local business search" class="rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local SEO Services -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Local SEO Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive local SEO solutions designed to put your business on the map and drive local customers to your door
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Google My Business Optimization</h3>
+            <p class="text-gray-600">Complete setup and optimization of your Google My Business profile to improve local visibility.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Local Keyword Research</h3>
+            <p class="text-gray-600">Target the right local keywords that your potential customers are actually searching for.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-list-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Local Directory Citations</h3>
+            <p class="text-gray-600">Get your business listed on all relevant local directories and citation sources.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Review Management</h3>
+            <p class="text-gray-600">Build and manage positive reviews to improve your local search rankings and credibility.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Mobile Optimization</h3>
+            <p class="text-gray-600">Ensure your website is mobile-friendly for local mobile searches.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Local Analytics & Reporting</h3>
+            <p class="text-gray-600">Track your local SEO performance with detailed analytics and monthly reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local SEO Process -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Local SEO Process</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            A proven 6-step process that consistently delivers local SEO results for businesses of all sizes
+          </p>
+        </div>
+
+        <div class="process-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Local SEO Audit</h3>
+            <p class="text-gray-600">We start with a comprehensive analysis of your current local SEO performance and identify opportunities for improvement.</p>
+          </div>
+
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Google My Business Setup</h3>
+            <p class="text-gray-600">Complete optimization of your Google My Business profile with proper categories, descriptions, and images.</p>
+          </div>
+
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Local Keyword Research</h3>
+            <p class="text-gray-600">Research and target the most relevant local keywords for your business and location.</p>
+          </div>
+
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Citation Building</h3>
+            <p class="text-gray-600">Build consistent business citations across all major local directories and platforms.</p>
+          </div>
+
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Content & Reviews</h3>
+            <p class="text-gray-600">Create local content and build positive customer reviews to improve rankings.</p>
+          </div>
+
+          <div class="process-step">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Monitor & Optimize</h3>
+            <p class="text-gray-600">Continuous monitoring and optimization to maintain and improve your local search rankings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Dominate Local Search?</h2>
+        <p class="text-xl mb-8 text-white/90">
+          Get found by customers in your area and drive more foot traffic to your business
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+            Get Free Local SEO Audit
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center justify-center">
+            View Local SEO Results
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 mb-6">
+              <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <i class="fas fa-chart-line text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold">Digital Tech Guides</span>
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md">
+              We help businesses achieve digital success through innovative marketing strategies, proven SEO techniques, and cutting-edge web development solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/local-seo.html" class="text-gray-400 hover:text-white transition-colors">Local SEO</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/ecommerce-seo.html" class="text-gray-400 hover:text-white transition-colors">E-commerce SEO</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/ppc-advertising.html" class="text-gray-400 hover:text-white transition-colors">PPC Advertising</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/web-development.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="https://shivamsingin.github.io/digital-tech-guides-static/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 Digital Tech Guides. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('active');
+      });
+
+      // Services dropdown toggle
+      document.getElementById('services-dropdown').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('dropdown-menu').classList.toggle('active');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.relative')) {
+          document.getElementById('dropdown-menu').classList.remove('active');
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
