@@ -62,27 +62,202 @@
       .dropdown-item:hover {
         background-color: #f9fafb;
       }
-      
-      .hero-image {
+
+      /* Modern Hero Section Styles */
+      .hero-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      }
+
+      .hero-background {
         position: absolute;
-        right: 0;
         top: 0;
-        height: 100%;
-        width: 50%;
-        opacity: 0.2;
-      }
-      
-      .hero-image img {
-        height: 100%;
+        left: 0;
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+        z-index: 1;
       }
-      
-      .background-pattern {
+
+      .hero-background-image {
         position: absolute;
-        inset: 0;
-        opacity: 0.1;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&h=1200&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.3;
+        transform: translateY(0);
+        transition: transform 0.1s ease-out;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 50%, rgba(51, 65, 85, 0.7) 100%);
+        z-index: 2;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 7xl;
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: center;
+        color: white;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        margin-bottom: 2rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #fbbf24;
+        transition: all 0.3s ease;
+      }
+
+      .hero-badge:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .hero-title {
+        font-size: clamp(3rem, 8vw, 5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1.25rem, 4vw, 1.5rem);
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        color: #cbd5e1;
+        max-width: 3xl;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+
+      .hero-cta-primary {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        color: #1e293b;
+        font-weight: 700;
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+      }
+
+      .hero-cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
+      }
+
+      .hero-cta-secondary {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        font-weight: 600;
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .hero-cta-secondary:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .hero-features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .hero-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #cbd5e1;
+        font-size: 0.875rem;
+      }
+
+      .hero-feature-icon {
+        color: #10b981;
+        font-size: 1rem;
+      }
+
+      /* Parallax Sections */
+      .parallax-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .parallax-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        transform: translateY(0);
+        transition: transform 0.1s ease-out;
+      }
+
+      .parallax-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      .parallax-content {
+        position: relative;
+        z-index: 2;
       }
 
       /* Enhanced animations and effects */
@@ -248,6 +423,24 @@
         50% { transform: translateY(-10px); }
         100% { transform: translateY(0px); }
       }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .hero-cta-group {
+          flex-direction: row;
+          justify-content: center;
+        }
+        
+        .hero-content {
+          padding: 0 2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .hero-content {
+          padding: 0 4rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -313,73 +506,78 @@
       </div>
     </nav>
 
-    <!-- Enhanced Hero Section -->
-    <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-32 overflow-hidden">
-      <div class="background-pattern"></div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Digital marketing success" />
+    <!-- Modern Hero Section -->
+    <section class="hero-section">
+      <div class="hero-background">
+        <div class="hero-background-image" id="hero-bg"></div>
       </div>
+      <div class="hero-overlay"></div>
       
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center lg:text-left lg:max-w-2xl">
-          <div class="mb-6">
-            <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
-              <i class="fas fa-star mr-2"></i>Trusted by 500+ Businesses
-            </span>
+      <div class="hero-content">
+        <div class="hero-badge fade-in">
+          <i class="fas fa-star mr-2"></i>
+          Trusted by 500+ Businesses Worldwide
+        </div>
+        
+        <h1 class="hero-title fade-in">
+          Transform Your Business with
+          <span class="gradient-text">Digital Excellence</span>
+        </h1>
+        
+        <p class="hero-subtitle slide-in-left">
+          We help businesses grow through innovative digital marketing strategies, proven SEO techniques, and cutting-edge web development solutions that drive real results.
+        </p>
+        
+        <div class="hero-cta-group">
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="hero-cta-primary">
+            Get Started Today
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="https://shivamsingin.github.io/digital-tech-guides-static/services.html" class="hero-cta-secondary">
+            View Our Services
+          </a>
+        </div>
+        
+        <div class="hero-features">
+          <div class="hero-feature">
+            <i class="fas fa-check-circle hero-feature-icon"></i>
+            <span>Free Consultation</span>
           </div>
-          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 fade-in">
-            Transform Your Business with
-            <span class="text-yellow-300 gradient-text">Digital Excellence</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed slide-in-left">
-            We help businesses grow through innovative digital marketing strategies, proven SEO techniques, and cutting-edge web development solutions that drive real results.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Get Started Today
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/services.html" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105">
-              View Our Services
-            </a>
+          <div class="hero-feature">
+            <i class="fas fa-check-circle hero-feature-icon"></i>
+            <span>No Setup Fees</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start space-x-8 text-sm">
-            <div class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              <span>Free Consultation</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              <span>No Setup Fees</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-check-circle text-green-400 mr-2"></i>
-              <span>30-Day Results</span>
-            </div>
+          <div class="hero-feature">
+            <i class="fas fa-check-circle hero-feature-icon"></i>
+            <span>30-Day Results</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="stats-card bounce-in">
-            <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
-            <div class="text-blue-100">Happy Clients</div>
-          </div>
-          <div class="stats-card bounce-in" style="animation-delay: 0.2s;">
-            <div class="text-4xl md:text-5xl font-bold mb-2">1000+</div>
-            <div class="text-blue-100">Projects Completed</div>
-          </div>
-          <div class="stats-card bounce-in" style="animation-delay: 0.4s;">
-            <div class="text-4xl md:text-5xl font-bold mb-2">300%</div>
-            <div class="text-blue-100">Average Traffic Increase</div>
-          </div>
-          <div class="stats-card bounce-in" style="animation-delay: 0.6s;">
-            <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
-            <div class="text-blue-100">Support Available</div>
+    <!-- Stats Section with Parallax -->
+    <section class="parallax-section py-20">
+      <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&h=800&q=80');"></div>
+      <div class="parallax-overlay"></div>
+      <div class="parallax-content">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="stats-card bounce-in">
+              <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+              <div class="text-blue-100">Happy Clients</div>
+            </div>
+            <div class="stats-card bounce-in" style="animation-delay: 0.2s;">
+              <div class="text-4xl md:text-5xl font-bold mb-2">1000+</div>
+              <div class="text-blue-100">Projects Completed</div>
+            </div>
+            <div class="stats-card bounce-in" style="animation-delay: 0.4s;">
+              <div class="text-4xl md:text-5xl font-bold mb-2">300%</div>
+              <div class="text-blue-100">Average Traffic Increase</div>
+            </div>
+            <div class="stats-card bounce-in" style="animation-delay: 0.6s;">
+              <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+              <div class="text-blue-100">Support Available</div>
+            </div>
           </div>
         </div>
       </div>
@@ -766,6 +964,35 @@
         });
       });
 
+      // Parallax Effect
+      function handleParallax() {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.hero-background-image, .parallax-bg');
+        
+        parallaxElements.forEach(element => {
+          const speed = 0.5;
+          const yPos = -(scrolled * speed);
+          element.style.transform = `translateY(${yPos}px)`;
+        });
+      }
+
+      // Throttle function for performance
+      function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+          const args = arguments;
+          const context = this;
+          if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+          }
+        }
+      }
+
+      // Add scroll event listener with throttling
+      window.addEventListener('scroll', throttle(handleParallax, 16));
+
       // Intersection Observer for animations
       const observerOptions = {
         threshold: 0.1,
@@ -788,6 +1015,9 @@
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
       });
+
+      // Initialize parallax on page load
+      handleParallax();
     </script>
   </body>
 </html>
