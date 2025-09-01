@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+  <!-- Symbol -->
+  <g transform="translate(150, 50) rotate(-5)">
+    <!-- Upper C-shaped element -->
+    <path d="M-25 -15 Q-35 -15 -35 -5 Q-35 5 -25 5 L15 5 Q25 5 25 -5 Q25 -15 15 -15 Z" 
+          fill="#0099CC" rx="3"/>
+    <!-- Lower arrow/chevron element -->
+    <path d="M-15 10 L5 20 L25 10 L15 15 Z" fill="#0099CC"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#0099CC">Digital</text>
+  <text x="150" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-weight="normal" font-size="14" fill="#0099CC" letter-spacing="1">TECH GUIDES</text>
+</svg>
