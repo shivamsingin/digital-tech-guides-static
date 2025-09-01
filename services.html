@@ -13,7 +13,7 @@
     <meta property="og:title" content="Our Services - Digital Tech Guides | Professional Digital Marketing" />
     <meta property="og:description" content="Explore our comprehensive digital marketing services including SEO, PPC, Social Media Marketing, Web Development, and more." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shivamsingin.github.io/digital-tech-guides/services.html" />
+    <meta property="og:url" content="https://shivamsingin.github.io/digital-tech-guides-static/services.html" />
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -56,14 +56,175 @@
       .dropdown-item:hover {
         background-color: #f9fafb;
       }
-      
+
+      /* Enhanced animations and effects */
+      .fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .slide-in-left {
+        animation: slideInLeft 0.8s ease-out;
+      }
+
+      @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-30px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      .slide-in-right {
+        animation: slideInRight 0.8s ease-out;
+      }
+
+      @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(30px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      .bounce-in {
+        animation: bounceIn 1s ease-out;
+      }
+
+      @keyframes bounceIn {
+        0% { opacity: 0; transform: scale(0.3); }
+        50% { opacity: 1; transform: scale(1.05); }
+        70% { transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
       .service-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        border-left: 4px solid transparent;
       }
       
       .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        border-left-color: #667eea;
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .service-icon:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      .stats-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .stats-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+      }
+
+      .process-step {
+        position: relative;
+        padding: 2rem;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .process-step::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .cta-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 30px;
+        padding: 4rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.1;
+      }
+
+      .background-pattern {
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
     </style>
   </head>
@@ -130,79 +291,112 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Our Digital Marketing Services</h1>
-        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-          Comprehensive digital solutions designed to drive growth, increase visibility, and maximize your ROI
+    <!-- Enhanced Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-32 overflow-hidden">
+      <div class="background-pattern"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-6">
+          <span class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
+            <i class="fas fa-star mr-2"></i>Comprehensive Digital Solutions
+          </span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 fade-in">
+          Our <span class="text-yellow-300 gradient-text">Digital Marketing</span> Services
+        </h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto slide-in-left">
+          Transform your business with our comprehensive suite of digital marketing services designed to drive growth, increase visibility, and maximize your ROI.
         </p>
+        <div class="mt-8 flex items-center justify-center space-x-8 text-sm">
+          <div class="flex items-center">
+            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+            <span>Proven Results</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+            <span>Expert Team</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+            <span>Custom Strategies</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- Enhanced Stats Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="stats-card bounce-in">
+            <div class="text-4xl md:text-5xl font-bold mb-2">11</div>
+            <div class="text-blue-100">Service Categories</div>
+          </div>
+          <div class="stats-card bounce-in" style="animation-delay: 0.2s;">
+            <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+            <div class="text-blue-100">Successful Projects</div>
+          </div>
+          <div class="stats-card bounce-in" style="animation-delay: 0.4s;">
+            <div class="text-4xl md:text-5xl font-bold mb-2">300%</div>
+            <div class="text-blue-100">Average ROI</div>
+          </div>
+          <div class="stats-card bounce-in" style="animation-delay: 0.6s;">
+            <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+            <div class="text-blue-100">Support Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Services Grid -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 gradient-text">Comprehensive Digital Marketing Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From SEO to web development, we offer a complete suite of digital marketing services to help your business grow and succeed online.
+          </p>
+        </div>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Local SEO -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-map-marker-alt text-blue-600 text-2xl"></i>
+          <!-- SEO Services -->
+          <div class="service-card p-8">
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <i class="fas fa-search"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Local SEO</h3>
-            <p class="text-gray-600 mb-6">Dominate local search results and attract customers in your area with our proven local SEO strategies.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Search Engine Optimization</h3>
+            <p class="text-gray-600 mb-6 text-center">Improve your search rankings and drive organic traffic with our proven SEO strategies.</p>
             <div class="space-y-3 mb-6">
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
-                Google My Business Optimization
+                Local & National SEO
               </div>
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
-                Local Citation Building
+                E-commerce Optimization
               </div>
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
-                Review Management
+                Technical SEO Audits
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Content Strategy
               </div>
             </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/local-seo.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- E-commerce SEO -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-shopping-cart text-green-600 text-2xl"></i>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/local-seo.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">E-commerce SEO</h3>
-            <p class="text-gray-600 mb-6">Boost your online store's visibility and drive more sales with our specialized e-commerce SEO services.</p>
-            <div class="space-y-3 mb-6">
-              <div class="flex items-center text-sm text-gray-600">
-                <i class="fas fa-check text-green-500 mr-3"></i>
-                Product Page Optimization
-              </div>
-              <div class="flex items-center text-sm text-gray-600">
-                <i class="fas fa-check text-green-500 mr-3"></i>
-                Category Page SEO
-              </div>
-              <div class="flex items-center text-sm text-gray-600">
-                <i class="fas fa-check text-green-500 mr-3"></i>
-                Shopping Feed Optimization
-              </div>
-            </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/ecommerce-seo.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
           </div>
 
           <!-- PPC Advertising -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-ad text-purple-600 text-2xl"></i>
+          <div class="service-card p-8">
+            <div class="service-icon bg-green-100 text-green-600">
+              <i class="fas fa-ad"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">PPC Advertising</h3>
-            <p class="text-gray-600 mb-6">Drive immediate results with targeted paid advertising campaigns across all major platforms.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">PPC Advertising</h3>
+            <p class="text-gray-600 mb-6 text-center">Drive immediate results with targeted paid advertising campaigns across all major platforms.</p>
             <div class="space-y-3 mb-6">
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
@@ -216,45 +410,25 @@
                 <i class="fas fa-check text-green-500 mr-3"></i>
                 Remarketing Campaigns
               </div>
-            </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/ppc-advertising.html" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Social Media Marketing -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-share-alt text-pink-600 text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Social Media Marketing</h3>
-            <p class="text-gray-600 mb-6">Build your brand presence and engage with your audience across all social media platforms.</p>
-            <div class="space-y-3 mb-6">
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
-                Content Strategy & Creation
-              </div>
-              <div class="flex items-center text-sm text-gray-600">
-                <i class="fas fa-check text-green-500 mr-3"></i>
-                Community Management
-              </div>
-              <div class="flex items-center text-sm text-gray-600">
-                <i class="fas fa-check text-green-500 mr-3"></i>
-                Paid Social Campaigns
+                Conversion Optimization
               </div>
             </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/social-media-marketing.html" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/ppc-advertising.html" class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Web Development -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-code text-indigo-600 text-2xl"></i>
+          <div class="service-card p-8">
+            <div class="service-icon bg-purple-100 text-purple-600">
+              <i class="fas fa-code"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
-            <p class="text-gray-600 mb-6">Custom websites and applications built for performance, user experience, and conversion optimization.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Web Development</h3>
+            <p class="text-gray-600 mb-6 text-center">Custom websites and applications built for performance, user experience, and conversion optimization.</p>
             <div class="space-y-3 mb-6">
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
@@ -268,19 +442,57 @@
                 <i class="fas fa-check text-green-500 mr-3"></i>
                 Mobile-First Design
               </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Performance Optimization
+              </div>
             </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/web-development.html" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/web-development.html" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media Marketing -->
+          <div class="service-card p-8">
+            <div class="service-icon bg-pink-100 text-pink-600">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Social Media Marketing</h3>
+            <p class="text-gray-600 mb-6 text-center">Build your brand presence and engage with your audience across all major social media platforms.</p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Platform Management
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Content Creation
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Community Engagement
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Influencer Partnerships
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/social-media-marketing.html" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
           </div>
 
           <!-- Content Marketing -->
-          <div class="service-card bg-white rounded-xl shadow-lg p-8">
-            <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-              <i class="fas fa-pen-fancy text-orange-600 text-2xl"></i>
+          <div class="service-card p-8">
+            <div class="service-icon bg-orange-100 text-orange-600">
+              <i class="fas fa-pen-fancy"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Content Marketing</h3>
-            <p class="text-gray-600 mb-6">Create valuable, engaging content that attracts, informs, and converts your target audience.</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Content Marketing</h3>
+            <p class="text-gray-600 mb-6 text-center">Create compelling content that attracts, engages, and converts your target audience.</p>
             <div class="space-y-3 mb-6">
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
@@ -288,32 +500,126 @@
               </div>
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
-                SEO-Optimized Articles
+                Video Production
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Infographic Design
               </div>
               <div class="flex items-center text-sm text-gray-600">
                 <i class="fas fa-check text-green-500 mr-3"></i>
                 Content Strategy
               </div>
             </div>
-            <a href="https://shivamsingin.github.io/digital-tech-guides-static/content-marketing.html" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/content-marketing.html" class="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Email Marketing -->
+          <div class="service-card p-8">
+            <div class="service-icon bg-red-100 text-red-600">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Email Marketing</h3>
+            <p class="text-gray-600 mb-6 text-center">Build lasting relationships with your customers through strategic email marketing campaigns.</p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Newsletter Campaigns
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Automation Workflows
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                Segmentation Strategies
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                A/B Testing
+              </div>
+            </div>
+            <div class="text-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/email-marketing.html" class="inline-flex items-center text-red-600 hover:text-red-700 font-semibold">
+                Learn More <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Let's discuss how our digital marketing services can help you achieve your business goals and drive sustainable growth.
-        </p>
-        <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center">
-          Get Your Free Consultation
-          <i class="fas fa-arrow-right ml-2"></i>
-        </a>
+    <!-- Our Process Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 gradient-text">Our Service Delivery Process</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We follow a systematic approach to ensure your digital marketing success with clear milestones and measurable outcomes.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="process-step">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">1. Discovery & Analysis</h3>
+              <p class="text-gray-600">We analyze your current digital presence, competitors, and market opportunities to create a strategic roadmap.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">2. Strategy Development</h3>
+              <p class="text-gray-600">Based on our analysis, we develop a comprehensive digital marketing strategy tailored to your business goals.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">3. Implementation</h3>
+              <p class="text-gray-600">Our expert team implements the strategy with precision, ensuring every element is optimized for success.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">4. Monitor & Optimize</h3>
+              <p class="text-gray-600">We continuously monitor performance and optimize campaigns to maximize your ROI and achieve sustainable growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced CTA Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="cta-section relative">
+          <div class="relative z-10">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Choose the perfect digital marketing services for your business and start your journey to digital success today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/contact.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 shadow-lg">
+                Get Started Today
+                <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+              <a href="https://shivamsingin.github.io/digital-tech-guides-static/case-studies.html" class="border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105">
+                View Case Studies
+              </a>
+            </div>
+            <div class="mt-8 text-center">
+              <p class="text-blue-100 text-sm">
+                <i class="fas fa-clock mr-2"></i>Free consultation • No commitment required • 30-minute session
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -388,6 +694,43 @@
         if (!e.target.closest('.relative')) {
           document.getElementById('dropdown-menu').classList.remove('active');
         }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.service-card, .process-step').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
       });
     </script>
   </body>
